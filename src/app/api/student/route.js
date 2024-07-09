@@ -12,5 +12,3 @@ ConnectDB()
 export async function GET(){
     return NextResponse.json({student:"all student data"})
 }
-
-console.log(process.env)
