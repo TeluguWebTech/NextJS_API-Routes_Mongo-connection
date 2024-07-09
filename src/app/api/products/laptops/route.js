@@ -1,6 +1,13 @@
+import { DBconnection } from "@/app/utils/config/db";
 import LaptopModel from "@/app/utils/models/Laptop";
 import { NextResponse } from "next/server";
 
+
+const ConnectDB = async()=>{
+    await DBconnection()
+}
+
+ConnectDB()
 
 export async function GET(){
     const laptopData = await LaptopModel.find({})
